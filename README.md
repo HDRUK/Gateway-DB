@@ -49,3 +49,9 @@ Create the required trigger functions
 create the required tables and associated triggers
 
 > create_search_audit.sql
+
+### Step 6
+
+Load the test data into the searchAudit_log table
+
+> create_test_data.sql
