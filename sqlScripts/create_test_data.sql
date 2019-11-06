@@ -1,10 +1,10 @@
 INSERT INTO public."searchAudit_log"
-    ("search_user_ID", "search_Detail", search_end_point)
+    ("search_user_ID", "search_Detail", "search_end_point", "search_record_offset", "search_record_limt")
 VALUES
-    ( 'ANON', 'https://theapi/thesearch?param1=1', 'theapi'),
-    ( 'WARD.T', 'https://theapi/thesearch?param1=2', 'theapi'),
-    ( 'BARNEY_F', 'https://theapi/thesearch?param1=3', 'theapi'),
-    ( 'ANON', 'https://theapi/thesearch?param1=4', 'theapi'),
-    ( 'ANON', 'https://theapi/thesearch?param1=5', 'theapi'),
-    ( 'ANON', 'https://theapi/thesearch?param1=6', 'theapi'),
-    ( 'ANON', 'https://theapi/thesearch?param1=7', 'theapi');
+    ( 'ANON', 'diabeties + sugar', 'https://theapi/thesearch', 0, 20),
+    ( 'WARD.T', 'sugar', 'https://theapi/thesearch', 0, 20),
+    ( 'BARNEY_F', 'temperature', 'https://theapi/thesearch', 0, 10),
+    ( 'ANON', 'cancer', 'https://theapi/thesearch', 10, 20),
+    ( 'ANON', 'fluid + transfer', 'https://theapi/thesearch', 0, 20),
+    ( 'ANON', 'heart rate', 'https://theapi/thesearch', 20, 20),
+    ( 'ANON', 'diasease', 'https://theapi/thesearch', 0, 20);

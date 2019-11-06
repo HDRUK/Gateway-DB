@@ -17,6 +17,10 @@ CREATE TABLE public."searchAudit_log"
     with time zone,
     last_updated timestamp
     with time zone,
+    "search_Record_Offset" integer DEFAULT 0,
+    "search_Record_Limit" integer DEFAULT 10,
+    "search_Sort_type" character varying
+    (100) COLLATE pg_catalog."default",
     CONSTRAINT "searchAudit_log_pkey" PRIMARY KEY
     ("searchAudit_ID")
 )
