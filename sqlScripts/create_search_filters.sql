@@ -1,26 +1,29 @@
--- Table: public."searchFilters"
+-- Table: public.searchfilters
 
--- DROP TABLE public."searchFilters";
+-- DROP TABLE public.searchfilters;
 
-CREATE TABLE public."searchFilters"
+CREATE TABLE public.searchfilters
 (
-    "searchFiletrs_Created_on" time
-    with time zone[] NOT NULL,
-    "searchFilters_ID" integer NOT NULL GENERATED ALWAYS AS IDENTITY
+    searchfilters_id integer NOT NULL
+    GENERATED ALWAYS AS IDENTITY
     ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
-    "searchFilters_Last_Updated" time
-    with time zone[] NOT NULL,
-    "searchFilters_Value" character varying
+    searchfilters_value character varying
     (100) COLLATE pg_catalog."default" NOT NULL,
-    "serachFilters_Type" character varying
+    searchfilters_type character varying
     (100) COLLATE pg_catalog."default" NOT NULL,
-    "searchFilters_SearchAudit_ID" integer NOT NULL,
-    CONSTRAINT "searchFilters_pkey" PRIMARY KEY
-    ("searchFilters_ID"),
-    CONSTRAINT "SearchAuditLogJoin" FOREIGN KEY
-    ("searchFilters_SearchAudit_ID")
-        REFERENCES public."searchAudit_log"
-    ("searchAudit_ID") MATCH SIMPLE
+    searchfilters_searchaudit_id integer,
+    searchfilters_created_on timestamp
+    with time zone DEFAULT now
+    (),
+    searchfilters_updated_on timestamp
+    with time zone DEFAULT now
+    (),
+    CONSTRAINT searchfilters_pkey PRIMARY KEY
+    (searchfilters_id),
+    CONSTRAINT searchfilters_searchaudit FOREIGN KEY
+    (searchfilters_searchaudit_id)
+        REFERENCES public.searchaudit_log
+    (searchaudit_id) MATCH SIMPLE
         ON
     UPDATE NO ACTION
         ON
@@ -30,5 +33,5 @@ CREATE TABLE public."searchFilters"
 
 TABLESPACE pg_default;
 
-    ALTER TABLE public."searchFilters"
+    ALTER TABLE public.searchfilters
     OWNER to "HDR_DB_ACCESS";
