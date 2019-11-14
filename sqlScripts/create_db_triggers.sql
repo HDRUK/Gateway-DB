@@ -37,4 +37,4 @@ END;
 $BODY$;
 
 ALTER FUNCTION public.trigger_set_timestamp_new()
-    OWNER TO postgres;
+    OWNER TO hdr_dev_admin;
