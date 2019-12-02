@@ -10,8 +10,6 @@ CREATE TABLE public.searchsaved
     searchsaved_user_id character varying
     (100) COLLATE pg_catalog."default",
     searchsaved_searchaudit_id integer,
-    searchsaved_name character varying
-    (100) COLLATE pg_catalog."default",
     searchsaved_created_on timestamp
     with time zone DEFAULT now
     (),
