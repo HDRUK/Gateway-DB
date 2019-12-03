@@ -60,13 +60,15 @@ Load the test data into the searchAudit_log table
 
 ## For Deployment
 
+> When using the -v values, they are converted to all lowercase
+
 #### Create The DB
 
-`psql -f .\sqlScripts\create_db.sql -U userName`
+`psql -f .\sqlScripts\create_db.sql -v dbName="DB NAME" -v userName="NEW USER ROLE" -U user`
 
 ### Create the tables / triggers etc
 
-`psql -f .\sqlScripts\database_initial_creation.sql -U postgres --dbname HDR_GATEWAY_DB`
+`psql -f .\sqlScripts\database_initial_creation.sql -v userName="user name from previous command" -U postgres --dbname DB Name from previous command`
 
 #### Migration Scripts
 

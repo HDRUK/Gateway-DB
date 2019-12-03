@@ -1,8 +1,5 @@
 
 -- NEED TO HAVE RUN THE CREATE DB SCRIPT FIRST
--- psql -f .\sqlScripts\create_db.sql -U HDR_DB_ACCESS
-
--- psql -f .\sqlScripts\database_initial_creation.sql -U HDR_DB_ACCESS --dbname HDR_GATEWAY_DB_SET
 
 -- Table: public.searchaudit_log
 
@@ -34,7 +31,7 @@ CREATE TABLE public.searchaudit_log
 TABLESPACE pg_default;
 
     ALTER TABLE public.searchaudit_log
-    -- OWNER to "HDR_DB_ACCESS";
+    OWNER to :userName;
 
     -- Index: search_user
 
@@ -81,7 +78,7 @@ TABLESPACE pg_default;
 TABLESPACE pg_default;
 
         ALTER TABLE public.searchfilters
-    OWNER to "HDR_DB_ACCESS";
+    OWNER to :userName;
 
         -- Table: public.searchsaved
 
@@ -117,7 +114,7 @@ TABLESPACE
             pg_default;
 
             ALTER TABLE public.searchsaved
-    OWNER to "HDR_DB_ACCESS";
+    OWNER to :userName;
 
             -- Index: fki_searchsaved_searchaudit_id
 
@@ -164,7 +161,7 @@ TABLESPACE
 TABLESPACE pg_default;
 
                 ALTER TABLE public.searchsort
-    OWNER to "HDR_DB_ACCESS";
+    OWNER to :userName;
 
                 -- FUNCTION: public.trigger_set_timestamp()
 
@@ -184,7 +181,7 @@ AS $BODY$
 $BODY$;
 
                 ALTER FUNCTION public.trigger_set_timestamp()
-    OWNER TO "HDR_DB_ACCESS";
+    OWNER TO :userName;
 
 
                 -- FUNCTION: public.trigger_set_timestamp_new()
@@ -205,4 +202,4 @@ AS $BODY$
 $BODY$;
 
                 ALTER FUNCTION public.trigger_set_timestamp_new()
-    OWNER TO "HDR_DB_ACCESS";
+    OWNER TO :userName;
