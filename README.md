@@ -66,8 +66,8 @@ Load the test data into the searchAudit_log table
 
 ### Create the tables / triggers etc
 
-`psql -f .\sqlScripts\database_initial_creation.sql -U postgres --dbname HDR_GATEWAY_DB_TEST_NEW`
+`psql -f .\sqlScripts\database_initial_creation.sql -U postgres --dbname HDR_GATEWAY_DB`
 
 #### Migration Scripts
 
-`psql -f .\sqlScripts\migrations\00_add_searchsaved_name_column.js --dbname HDR_GATEWAY_DB_TEST_NEW -U userName`
+`psql -f .\sqlScripts\migrations\00_add_searchsaved_name_column.js --dbname HDR_GATEWAY_DB -U userName`
