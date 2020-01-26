@@ -1,24 +1,4 @@
-# HDR GATEWAY
-
-## Postgress DB
-
-## Licence
-
-Apache 2
-
-## Author(s)
-
-[IBM UK](https://www.ibm.com/uk-en)  
-[Health Data Research UK](https://www.hdruk.ac.uk/)  
-[University of Oxford, Department of Computer Science](http://www.cs.ox.ac.uk/)  
-[Parity](https://www.parity.net/)  
-[METADATAWORKS](https://metadataworks.co.uk/)  
-​
-
-## Contributors
-
-To be added
-​
+# HDR UK GATEWAY - PostgreSQL Database
 
 ## Relevant Repositories
 
