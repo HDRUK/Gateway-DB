@@ -1,3 +1,6 @@
+[![LICENCE](https://img.shields.io/github/license/HDRUK/Gateway-DB)](https://github.com/HDRUK/Gateway-DB/blob/master/LICENSE)
+[![Support](https://img.shields.io/badge/Supported%20By-HDR%20UK-blue)](https://hdruk.ac.uk)
+
 # HDR UK GATEWAY - PostgreSQL Database
 
 ## Relevant Repositories
